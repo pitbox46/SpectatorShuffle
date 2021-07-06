@@ -1,7 +1,7 @@
 package github.pitbox46.spectatorshuffle.mixin;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
-import github.pitbox46.spectatorshuffle.FirstPersonRendererAccessor;
+import github.pitbox46.spectatorshuffle.mixinaccessors.FirstPersonRendererAccessor;
 import net.minecraft.client.entity.player.AbstractClientPlayerEntity;
 import net.minecraft.client.renderer.FirstPersonRenderer;
 import net.minecraft.client.renderer.IRenderTypeBuffer;

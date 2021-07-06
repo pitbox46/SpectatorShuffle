@@ -14,7 +14,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.spongepowered.mixin'
 
 group = 'github.pitbox46'
-version = '1.16.5-1.0.1'
+version = '1.16.5-1.1.0'
 archivesBaseName = 'spectatorshuffle'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(8) // Mojang ships Java 8 to end users, so your mod should target Java 8.
@@ -135,6 +135,7 @@ dependencies {
 
     runtimeOnly fg.deobf("curse.maven:uteamcore-273744:3350619")
     runtimeOnly fg.deobf("curse.maven:usefulbackpacks-274338:3350860")
+    runtimeOnly fg.deobf('curse.maven:spark-361579:3337641')
 
     // You may put jars on which you depend on in ./libs or you may define them like so..
     // compile "some.group:artifact:version:classifier"

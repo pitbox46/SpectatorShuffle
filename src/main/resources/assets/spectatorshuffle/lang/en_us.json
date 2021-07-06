@@ -1,5 +1,6 @@
 {
   "key.spectatorshuffle.toggle": "Toggle auto-switch spectated player",
+  "key.spectatorshuffle.stopspectating": "Stop spectating if spectating a player",
   "key.spectatorshuffle.category": "Spectator Shuffle",
   "message.spectatorshuffle.nonespectatable": "No spectatable players found. Will try again in 60 seconds.",
   "message.spectatorshuffle.shuffleoff": "Shuffle turned off"

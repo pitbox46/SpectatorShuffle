@@ -2,7 +2,7 @@ package github.pitbox46.spectatorshuffle.mixin;
 
 import com.google.common.base.MoreObjects;
 import com.mojang.blaze3d.matrix.MatrixStack;
-import github.pitbox46.spectatorshuffle.FirstPersonRendererAccessor;
+import github.pitbox46.spectatorshuffle.mixinaccessors.FirstPersonRendererAccessor;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.player.AbstractClientPlayerEntity;
 import net.minecraft.client.renderer.*;
@@ -11,7 +11,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.math.vector.Vector3f;
 import net.minecraft.world.GameType;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;

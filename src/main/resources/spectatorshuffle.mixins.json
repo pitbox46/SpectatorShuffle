@@ -5,14 +5,16 @@
   "compatibilityLevel": "JAVA_8",
   "refmap": "spectatorshuffle.refmap.json",
   "client": [
-    "FirstPersonRendererMixin",
     "ChestTileEntityMixin",
-    "GameRenderMixin"
+    "FirstPersonRendererMixin",
+    "GameRenderMixin",
+    "OpenContainerMixin"
   ],
   "mixins": [
     "FMLNetworkConstantsAccessor",
     "NetworkHooksMixin",
-    "ServerPlayerEntityMixin"
+    "ServerPlayerEntityMixin",
+    "SpectateCommandMixin"
   ],
   "injectors": {
     "defaultRequire": 1

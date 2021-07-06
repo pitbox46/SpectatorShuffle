@@ -1,4 +1,4 @@
-package github.pitbox46.spectatorshuffle;
+package github.pitbox46.spectatorshuffle.mixinaccessors;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import net.minecraft.client.entity.player.AbstractClientPlayerEntity;

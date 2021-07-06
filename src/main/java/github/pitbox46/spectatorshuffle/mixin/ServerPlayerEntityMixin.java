@@ -35,8 +35,10 @@ public abstract class ServerPlayerEntityMixin {
         try {
             SpectatorShuffle.SPECTATING_PLAYERS.entrySet().removeIf(entry -> entry.getValue().contains((ServerPlayerEntity) (Object) this));
 
-            SpectatorShuffle.SPECTATING_PLAYERS.putIfAbsent(this.spectatingEntity, new ArrayList<>());
-            SpectatorShuffle.SPECTATING_PLAYERS.get(this.spectatingEntity).add((ServerPlayerEntity) (Object) this);
+            if(this.spectatingEntity != (ServerPlayerEntity) (Object) this) {
+                SpectatorShuffle.SPECTATING_PLAYERS.putIfAbsent(this.spectatingEntity, new ArrayList<>());
+                SpectatorShuffle.SPECTATING_PLAYERS.get(this.spectatingEntity).add((ServerPlayerEntity) (Object) this);
+            }
         } catch (Throwable e) {
             e.printStackTrace();
         }
@@ -93,7 +95,8 @@ public abstract class ServerPlayerEntityMixin {
     public void onCloseContainer(CallbackInfo ci) {
         if(SpectatorShuffle.SPECTATING_PLAYERS.containsKey((ServerPlayerEntity)(Object) this)) {
             for (ServerPlayerEntity spectator : SpectatorShuffle.SPECTATING_PLAYERS.get((ServerPlayerEntity) (Object) this)) {
-                spectator.closeScreen();
+                if(spectator != (ServerPlayerEntity) (Object) this)
+                    spectator.closeScreen();
             }
         }
     }
